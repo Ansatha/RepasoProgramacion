@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var printOdds_1 = require("./printOdds");
+var num1 = 31;
+printOdds_1.printOdds(num1);
+var num2 = 12;
+printOdds_1.printOdds(num2);
+var num3 = -10;
+printOdds_1.printOdds(num3);
+var num4 = 'Hola';
+printOdds_1.printOdds(num4);
+console.log();

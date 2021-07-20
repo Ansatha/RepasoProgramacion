@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var sumLettersFromArray_1 = require("../08/sumLettersFromArray");
+var oddVsEven_1 = require("../09/oddVsEven");
+var cNames = ['Casa', 'Coche', 'Ciudad', 'Cesta'];
+var bNames = ['Barco', 'Baca', 'Bicicleta', 'Balon', 'Bisiesto', 'Brasil'];
+var vNames = ['Venezuela', 'Veneno', 'Voltaje'];
+oddVsEven_1.oddVsEven(sumLettersFromArray_1.sumLettersFromArray(cNames));
+oddVsEven_1.oddVsEven(sumLettersFromArray_1.sumLettersFromArray(bNames));
+oddVsEven_1.oddVsEven(sumLettersFromArray_1.sumLettersFromArray(vNames));
+console.log();
