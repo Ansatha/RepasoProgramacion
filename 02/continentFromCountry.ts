@@ -26,5 +26,5 @@ export function continentFromCountry(countryIn:string):void
         indexContinents++;
     };
     continentFound ? console.log('El país', countryIn, 'está en', whatContinent + '.\n') :
-    console.log('\n\x1b[31m%s\x1b[0m','Error:', '\n\'' + countryIn + '\' no está incluido en las listas.\nElige otro país.\n');
+    console.log('\x1b[41m%s\x1b[0m','Error:', '\n\'' + countryIn + '\' no está incluido en las listas.\nElige otro país.\n');
 };
