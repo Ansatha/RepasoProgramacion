@@ -2,7 +2,6 @@
 exports.__esModule = true;
 exports.fechaToZodiaco = void 0;
 function fechaToZodiaco(fecha) {
-    var signo = "";
     var tablaZodiaco = {
         'Capricornio': [new Date(1981, 11, 22), new Date(1982, 0, 19)],
         'Acuario': [new Date(1982, 0, 20), new Date(1982, 1, 18)],
@@ -17,16 +16,17 @@ function fechaToZodiaco(fecha) {
         'Escorpio': [new Date(1982, 9, 23), new Date(1982, 10, 22)],
         'Sagitario': [new Date(1982, 10, 23), new Date(1982, 11, 21)]
     };
+    var signos = ['Capricornio', 'Acuario', 'Piscis', 'Aries', 'Tauro', 'Géminis', 'Cáncer', 'Leo', 'Virgo', 'Libra', 'Escorpio', 'Sagitario'];
     var mes = fecha.getMonth();
     var dia = fecha.getDate();
-    for (signo in tablaZodiaco) {
-        if ((tablaZodiaco[signo][0].getMonth() == mes && tablaZodiaco[signo][0].getDate() <= dia) ||
-            (tablaZodiaco[signo][1].getMonth() == mes && tablaZodiaco[signo][1].getDate() >= dia)) {
-            return signo;
-        }
-        ;
+    var index = 0;
+    while (index < signos.length &&
+        (!(tablaZodiaco[signos[index]][0].getMonth() === mes && tablaZodiaco[signos[index]][0].getDate() <= dia) &&
+            !(tablaZodiaco[signos[index]][1].getMonth() === mes && tablaZodiaco[signos[index]][1].getDate() >= dia))) {
+        index++;
     }
     ;
+    return signos[index];
 }
 exports.fechaToZodiaco = fechaToZodiaco;
 ;
